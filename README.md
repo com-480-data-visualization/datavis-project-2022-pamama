@@ -13,3 +13,5 @@ Students : Knöpfel Marie, Vandelle Marc Pierre, Cito Paloma
 **10% of the final grade**
 
 [Milestone 2](Mileston2.pdf)
+
+Website skeleton : [here](https://com-480-data-visualization.github.io/datavis-project-2022-pamama/)
