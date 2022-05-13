@@ -10,101 +10,73 @@
     <!--spotify logo in the tab -->
      <link rel="icon" type="image/png" href="imgWebsite/Spotify_App_Logo.png">
      
-     <!-- Fullpage -->
-    <link href="http://zikro.gr/dbg/html/fullPage/jquery.fullpage.css" rel="stylesheet"/>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    <script src="http://zikro.gr/dbg/html/fullPage/jquery.fullpage.js"></script>        
-
-    <script >
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                navigation: true,
-                navigationTooltips: pages,
-                scrollbars:true,
-                slidesNavigation: true,
-                controlArrows: false,
-                verticalCentered: true,
-                fitToSection: false,
-                scrollOverflow: true,
-                sectionsColor: pages.map(function() {
-                    return '#000000';
-                }),
-                afterRender: function() {
-                    setInterval(function() {
-                        $.fn.fullpage.moveSectionDown();
-                    }, 1500);
-                }
-            });    
-        });
-    </script>
+     <link rel="stylesheet" type="text/css" href="style/fullpage.css" />
     </head>
 
 
 
     <body>
         <div id="fullpage">
-            <div id="intro" class="section">
-                <div class="slide"></div>
-                    <div style="text-align:center; margin: 50px 0;">
-                        <img src="imgWebsite/Spotify_App_Logo.png"></img>
-                    </div>
-                    <br>
-                    <h2>Ever wondered how they became so popular ?</h2>
+            <div class="section " id="section0">
+                <div style="text-align:center; margin: 50px 0;">
+                    <img src="imgWebsite/Spotify_App_Logo.png"></img>
+                </div>
+                <br>
+                <h2>Spotify Top 200 2020-2021</h2>
+            </div>
+            <div class="section" id="section1">
+                <div class="intro">
+                    <h2>Intro</h2>
+                        <div class="left-justified-text" style="max-width: 1000px; margin: 10px auto; font-size: x-large;">
+                            First, we will do a presentation of the top artists to get a better idea of the popularity trend. 
+                            We will pick the 10 artists with the best ranking. 
+                          <br><br>
+                          Each of them will be represented by their picture that we will be able to select to show some more 
+                            information like their rank, their top songs, and the genre of music. We took inspiration from the 
+                            display that we can find on the Spotify profiles.
+                          <br><br>
+                          To represent the top songs independently of the top artists we will simply display a playlist as it can be found on Spotify with the possibility to listen to each song. 
+                        </div>
                 </div>
             </div>
-            <div id="First page" class="section">
-                <div class="container">
-                  <div class="section-body">
-                    <div id="preface" class="left-justified-text" style="max-width: 700px; margin: 10px auto;">
-                      Spotify ! Blablabla
-                      <br><br>
-                      More blabla
-                      <br><br>
-                      But also,blabla
-                      <br><br>
-                      Let's see !
-                    </div>
-                  </div>
-                </div>
+            <div class="section" id="section2">
+                <div class="slide" id="slide1"><h1>Soft graduated colors</h1></div>
+                <div class="slide" id="slide2"><h1>Even for each slide if you want</h1></div>
             </div>
-            <div id="second page" class="section">
-                <div class="container">
-                  <div class="section-body">
-                    <div id="preface" class="left-justified-text" style="max-width: 700px; margin: 10px auto;">
-                      Spotify ! Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla 
-                      Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla
-                      <br><br>
-                      More blabla
-                      <br><br>
-                      But also,blabla
-                      <br><br>
-                      Let's see !
-                    </div>
-                  </div>
-                </div>
+            <div class="section" id="section3">
+                <h2>Good morning</h2>
+                <ul>
+                    <li>Explore Top Artists</li>
+                    <li>Explore Top songs</li>
+                    <li>Genres</li>
+                    <li>Music Features</li>
+                    <li>Popularity game</li>
+                  </ul>
             </div>
-               <!-- COUTNER -->
-        <div class="section">
-            <div class="container">
-                <div class="section-heading sofa-undericon">
-                <h2>Who's listening ?</h2>
-              </div>
-              <div class="section-body">
-                <div class="left-justified-text" style="max-width: 1000px; margin: 10px auto; font-size: x-large;">
-                  Think twice before endlessly scrolling down and hoping to find what you’re looking for, Netflix’s catalogue is enormous.
-                  Next thing you know it’ll be time for bed, we warned you!
-                  <br><br>
-                  If you’ve ever wondered why there are much more movies than TV shows,
-                  don’t forget the streaming service started out as an online DVD-rental in the United States.
-                  <br><br>
-                  Chances are you probably do not live there but still can access the platform. That’s because in 2010, they started expanding
-                  their services to different regions of the world. Are all parts of the world watching the same anglophone content? Definitely not.
-                </div>
-              </div>
+            <div class="section" id="section4">
+                <h2>Top artists</h2>
+                
             </div>
-          </div>
-          <!-- BUSIEST MONTH -->
+            <div class="section" id="section5">
+                <h2>Top songs</h2>
+            </div>
+            <div class="section" id="section6">
+                <h2>Genres</h2>
+            </div>
+            <div class="section" id="section7">
+                <h2>Music features</h2>
+            </div>
+            <div class="section" id="section8">
+                <h2>Popularity game</h2>
+            </div>
         </div>
+
+        <script type="text/javascript" src="js/fullpage.js"></script>
+        <script type="text/javascript" src="js/examples.js"></script>
+
+        <script type="text/javascript">
+            var myFullpage = new fullpage('#fullpage');
+        </script>
     </body>
 
 
