@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>SpotifyTop200</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="style/main.css" />
+
+
+    <!--spotify logo in the tab -->
+     <link rel="icon" type="image/png" href="imgWebsite/Spotify_App_Logo.png">
+     
+     <!-- Fullpage -->
+    <link href="http://zikro.gr/dbg/html/fullPage/jquery.fullpage.css" rel="stylesheet"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="http://zikro.gr/dbg/html/fullPage/jquery.fullpage.js"></script>        
+
+    <script >
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                navigation: true,
+                navigationTooltips: pages,
+                scrollbars:true,
+                slidesNavigation: true,
+                controlArrows: false,
+                verticalCentered: true,
+                fitToSection: false,
+                scrollOverflow: true,
+                sectionsColor: pages.map(function() {
+                    return '#000000';
+                }),
+                afterRender: function() {
+                    setInterval(function() {
+                        $.fn.fullpage.moveSectionDown();
+                    }, 1500);
+                }
+            });    
+        });
+    </script>
+    </head>
+
+
+
+    <body>
+        <div id="fullpage">
+            <div id="intro" class="section">
+                <div class="slide"></div>
+                    <div style="text-align:center; margin: 50px 0;">
+                        <img src="imgWebsite/Spotify_App_Logo.png"></img>
+                    </div>
+                    <br>
+                    <h2>Ever wondered how they became so popular ?</h2>
+                </div>
+            </div>
+            <div id="First page" class="section">
+                <div class="container">
+                  <div class="section-body">
+                    <div id="preface" class="left-justified-text" style="max-width: 700px; margin: 10px auto;">
+                      Spotify ! Blablabla
+                      <br><br>
+                      More blabla
+                      <br><br>
+                      But also,blabla
+                      <br><br>
+                      Let's see !
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="second page" class="section">
+                <div class="container">
+                  <div class="section-body">
+                    <div id="preface" class="left-justified-text" style="max-width: 700px; margin: 10px auto;">
+                      Spotify ! Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla 
+                      Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla
+                      <br><br>
+                      More blabla
+                      <br><br>
+                      But also,blabla
+                      <br><br>
+                      Let's see !
+                    </div>
+                  </div>
+                </div>
+            </div>
+               <!-- COUTNER -->
+        <div class="section">
+            <div class="container">
+                <div class="section-heading sofa-undericon">
+                <h2>Who's listening ?</h2>
+              </div>
+              <div class="section-body">
+                <div class="left-justified-text" style="max-width: 1000px; margin: 10px auto; font-size: x-large;">
+                  Think twice before endlessly scrolling down and hoping to find what you’re looking for, Netflix’s catalogue is enormous.
+                  Next thing you know it’ll be time for bed, we warned you!
+                  <br><br>
+                  If you’ve ever wondered why there are much more movies than TV shows,
+                  don’t forget the streaming service started out as an online DVD-rental in the United States.
+                  <br><br>
+                  Chances are you probably do not live there but still can access the platform. That’s because in 2010, they started expanding
+                  their services to different regions of the world. Are all parts of the world watching the same anglophone content? Definitely not.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- BUSIEST MONTH -->
+        </div>
+    </body>
+
+
+
+</html>
+
