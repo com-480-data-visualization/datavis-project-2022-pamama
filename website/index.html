@@ -75,157 +75,156 @@
                             <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1588347204i/53307166._SS1000_.jpg" alt="">    
                         </div>
                         <p class="section--body--item--title">
-                            <div id="myData"></div>
-                            <script>
-                            d3.json('../data/top10artists.json')
-                            .then(function (response) {
-                                console.log('ok')
-                                return response.json();
-                            })
-                            .then(function (data) {
-                                appendData(data);
-                            })
-                            .catch(function (err) {
-                                console.log('error: ' + err);
-                            });
-                        
-                            function appendData(data) {
-                                var mainContainer = document.getElementById("myData");
-                                for (var i = 0; i < 2; i++) {
-                                    var div = document.createElement("div");
-                                    div.innerHTML = 'Rank: ' + data[i].Rank + ' ' + data[i].Artist;
-                                    mainContainer.appendChild(div);
-                                    console.log(data[i].Artist)
-                                }
-                            }
-                        </script>
+                            <div id="artist1" style="font-size:medium; font-weight:bold;"></div>                            
                         </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;" ></i>
                         </div>
-                        <div class="rectangle">Rank : #1 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle1" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://flair-magazine.com/wp-content/uploads/2021/05/bts-lv_0.jpeg" alt="">
                         </div>
-                        <p class="section--body--item--title">BTS</p>
+                        <p class="section--body--item--title">
+                            <div id="artist2" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #2 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle2" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://static01.nyt.com/images/2020/02/24/arts/24billboard-item/24billboard-item-mediumSquareAt3X.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Justin Bieber</p>
+                        <p class="section--body--item--title">
+                            <div id="artist3" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #3 <br><br> Top song : <br><br>Genres : </div>
+                        <div id="rectangle3" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://nyunews.com/wp-content/uploads/2018/03/030118_liluzivert_facebook.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Lil Uzi Vert</p>
+                        <p class="section--body--item--title">
+                            <div id="artist4" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #4 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle4" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://i.pinimg.com/originals/da/b0/34/dab03471461222c2165987e51639d9bb.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Bad Bunny</p>
+                        <p class="section--body--item--title">
+                            <div id="artist5" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #5 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle5" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://static01.nyt.com/images/2020/07/14/arts/13billboard/13billboard-mediumSquareAt3X.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Pop Smoke</p>
+                        <p class="section--body--item--title">
+                            <div id="artist6" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #6 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle6" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://data.whicdn.com/images/318146168/original.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Juice WRLD</p>
+                        <p class="section--body--item--title">
+                            <div id="artist7" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #7 <br><br> Top song : <br> <br>Genres : </div>
+                        <div id="rectangle7" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://static01.nyt.com/images/2021/02/02/arts/31popcast/31popcast-mediumSquareAt3X.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Olivia Rodrigo</p>
+                        <p class="section--body--item--title">
+                            <div id="artist8" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #8 <br> <br>Top song : <br><br> Genres : </div>
+                        <div id="rectangle8" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://f4.bcbits.com/img/a0923440747_16.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Eminem</p>
+                        <p class="section--body--item--title">
+                            <div id="artist9" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #9 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle9" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://www.femalefirst.co.uk/image-library/square/1000/t/the-weeknd-promo-shot.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">The Weeknd</p>
+                        <p class="section--body--item--title">
+                            <div id="artist10" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #10 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle10" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://pyxis.nymag.com/v1/imgs/8a0/881/e5d0cc7883f97e26f50f39389cc4c20df4-20-j-cole.rsquare.w700.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">J. Cole</p>
+                        <p class="section--body--item--title">
+                            <div id="artist11" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #11 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle11" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
                             <img src="https://i.pinimg.com/736x/1b/ce/bb/1bcebb1549e3c302861e236cef4b9ab1.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">Doja Cat</p>
+                        <p class="section--body--item--title">
+                            <div id="artist12" style="font-size:medium; font-weight:bold;"></div>
+                        </p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
-                        <div class="rectangle">Rank : #12 <br><br> Top song : <br><br> Genres : </div>
+                        <div id="rectangle12" class="rectangle"></div>
                     </div>
                 </div>
                 
@@ -261,6 +260,23 @@
 
         <script type="text/javascript">
             var myFullpage = new fullpage('#fullpage');
+        </script>
+
+        <script>
+            $.getJSON("data/top12artists.json", function(data) {
+            for(var i = 0; i<data.length ; i++) {
+                var mainContainer = document.getElementById("artist"+data[i].Rank);
+                var div = document.createElement("div");
+                div.innerHTML = data[i].Artist;
+                mainContainer.appendChild(div);
+                var rec = document.getElementById("rectangle"+data[i].Rank);
+                var div2 = document.createElement("div");
+                div2.innerHTML = '<br> Rank : #'+data[i].Rank  + '<br><br>'  +'Top song : ' + data[i]['Top song'] 
+                + '<br><br>' +'Genres : ' + data[i].Genres; 
+                rec.appendChild(div2)
+            }
+            
+            });
         </script>
     </body>
 

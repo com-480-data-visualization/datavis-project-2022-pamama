@@ -178,7 +178,7 @@ a.section--header--right--more {
 
 .section--body--item {
     width: 165px;
-    height: 200px;
+    height: 220px;
     background-color: rgb(38, 38, 38);
     display: inline-block
 
@@ -251,7 +251,7 @@ a.section--header--right--more {
 .rectangle{
   padding-top: -40px;
     width:150px;
-    height:180px;
+    height:210px;
     z-index: 1000;
     background-color: rgb(93, 93, 93,0.8);
     position: absolute;
@@ -259,6 +259,8 @@ a.section--header--right--more {
     font-size: 17px;
    /* top: 250px;
     right: 1150px;*/
+    margin-top: -250px;
+    margin-right: -20px;
     color: white;
     display: none;
   }
@@ -278,5 +280,3 @@ a.section--header--right--more {
     
   }
 
- 
-  

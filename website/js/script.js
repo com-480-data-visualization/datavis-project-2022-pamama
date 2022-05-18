@@ -7,27 +7,11 @@
         const myPara = document.createElement('p');
         myPara.textContent = `Hometown: ${obj['homeTown']} // Formed: ${obj['formed']}`;
         header.appendChild(myPara);
-});
+});*/   
    
-  
 
-  const myObj = JSON.parse(myJSON);
-x = myObj["name"];
-
-d3.json('../data/top10artists.json')
-    .then(data => {
-      data.forEach(artist => {
-        if(artist.Artist == 'Taylor Swift') {
-            var container = document.getElementById("artist1");
-            var div = document.createElement("div");
-            div.innerHTML = artist.Artist;
-            container.appendChild(div);
-        }
-    });
-
-    });*/
-
-    fetch('../../data/top10artists.json')
+/*
+    fetch('../data/top10artists.json')
     .then(function (response) {
         console.log('ok')
         return response.json();
@@ -47,4 +31,4 @@ d3.json('../data/top10artists.json')
             mainContainer.appendChild(div);
             console.log()
         }
-    }
+    }*/
