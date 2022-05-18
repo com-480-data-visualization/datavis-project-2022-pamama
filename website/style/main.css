@@ -257,8 +257,6 @@ a.section--header--right--more {
     position: absolute;
     text-align: center;
     font-size: 17px;
-   /* top: 250px;
-    right: 1150px;*/
     margin-top: -250px;
     margin-right: -20px;
     color: white;
