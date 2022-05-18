@@ -13,12 +13,16 @@
      <link rel="stylesheet" type="text/css" href="style/fullpage.css" />
 
      <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
-    </head>
+    <!-- jquery -->
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+     <script src="https://d3js.org/d3.v7.min.js"></script>
 
+    </head>
 
 
     <body>
         <div id="fullpage">
+            <!--first page : spotify logo-->
             <div class="section " id="section0">
                 <div style="text-align:center; margin: 50px 0;">
                     <img src="imgWebsite/Spotify_App_Logo.png"></img>
@@ -26,6 +30,7 @@
                 <br>
                 <h2>Spotify Top 200 2020-2021</h2>
             </div>
+            <!--second page : explanation/introduction-->
             <div class="section" id="section1">
                 <div class="intro">
                     <h2>Intro</h2>
@@ -41,6 +46,7 @@
                         </div>
                 </div>
             </div>
+             <!--third page : Menu -->
             <div class="section" id="section3">
                 <br><br>
                 <h2>Good morning</h2>
@@ -52,6 +58,7 @@
                     <li><a href="#section8">Popularity game</a></li>
                   </ul>
             </div>
+             <!--fourth page : Explore top artists-->
             <div class="section" id="section4">
                 <h2>Top artists</h2>
                 <div class="section--header">
@@ -59,147 +66,187 @@
                         <h2 class="title">Top artists</h2>
                     </div>
                     <div class="section--header--right">
-                        <a href="#" class="section--header--right--more">VIEW ALL</a>
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1DWXgY89J4Sjdb" class="section--header--right--more" target="_blank">VIEW ALL</a>
                     </div>
                 </div>
                 <div class="section--body" >
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="https://media.resources.festicket.com/www/artists/Billie_Eilish_pic_.jpeg" alt="">
+                            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1588347204i/53307166._SS1000_.jpg" alt="">    
                         </div>
-                        <p class="section--body--item--title">Billie Eilish</p>
-                        <p class="section--body--item--subtitle">Artist</p>
-                        <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;" ></i>
-                        </div>
-                    </div>
-                    <div class="section--body--item artist--item">
-                        <div class="section--body--item--img">
-                            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1588347204i/53307166._SS1000_.jpg" alt="">
-                        </div>
-                        <p class="section--body--item--title">Taylor Swift</p>
-                        <p class="section--body--item--subtitle">Artist</p>
-                        <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
-                        </div>
-                    </div>
-                    <div class="section--body--item artist--item">
-                        <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
-                        </div>
-                        <p class="section--body--item--title">C</p>
-                        <p class="section--body--item--subtitle">Artist</p>
-                        <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
-                        </div>
-                    </div>
-                    <div class="section--body--item artist--item">
-                        <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
-                        </div>
-                        <p class="section--body--item--title">D</p>
-                        <p class="section--body--item--subtitle">Artist</p>
-                        <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
-                        </div>
-                    </div>
-                    <div class="section--body--item artist--item">
-                        <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
-                        </div>
-                        <p class="section--body--item--title">E</p>
-                        <p class="section--body--item--subtitle">Artist</p>
-                        <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
-                        </div>
+                        <p class="section--body--item--title">
+                            <div id="myData"></div>
+                            <script>
+                            d3.json('../data/top10artists.json')
+                            .then(function (response) {
+                                console.log('ok')
+                                return response.json();
+                            })
+                            .then(function (data) {
+                                appendData(data);
+                            })
+                            .catch(function (err) {
+                                console.log('error: ' + err);
+                            });
                         
+                            function appendData(data) {
+                                var mainContainer = document.getElementById("myData");
+                                for (var i = 0; i < 2; i++) {
+                                    var div = document.createElement("div");
+                                    div.innerHTML = 'Rank: ' + data[i].Rank + ' ' + data[i].Artist;
+                                    mainContainer.appendChild(div);
+                                    console.log(data[i].Artist)
+                                }
+                            }
+                        </script>
+                        </p>
+                        <p class="section--body--item--subtitle">Artist</p>
+                        <div class="section--body--item--play">
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;" ></i>
+                        </div>
+                        <div class="rectangle">Rank : #1 <br><br> Top song : <br><br> Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://flair-magazine.com/wp-content/uploads/2021/05/bts-lv_0.jpeg" alt="">
                         </div>
-                        <p class="section--body--item--title">F</p>
+                        <p class="section--body--item--title">BTS</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #2 <br><br> Top song : <br><br> Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://static01.nyt.com/images/2020/02/24/arts/24billboard-item/24billboard-item-mediumSquareAt3X.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">G</p>
+                        <p class="section--body--item--title">Justin Bieber</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #3 <br><br> Top song : <br><br>Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://nyunews.com/wp-content/uploads/2018/03/030118_liluzivert_facebook.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">H</p>
+                        <p class="section--body--item--title">Lil Uzi Vert</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #4 <br><br> Top song : <br><br> Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://i.pinimg.com/originals/da/b0/34/dab03471461222c2165987e51639d9bb.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">I</p>
+                        <p class="section--body--item--title">Bad Bunny</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #5 <br><br> Top song : <br><br> Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://static01.nyt.com/images/2020/07/14/arts/13billboard/13billboard-mediumSquareAt3X.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">J</p>
+                        <p class="section--body--item--title">Pop Smoke</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #6 <br><br> Top song : <br><br> Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://data.whicdn.com/images/318146168/original.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">K</p>
+                        <p class="section--body--item--title">Juice WRLD</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #7 <br><br> Top song : <br> <br>Genres : </div>
                     </div>
                     <div class="section--body--item artist--item">
                         <div class="section--body--item--img">
-                            <img src="http://via.placeholder.com/150x150" alt="">
+                            <img src="https://static01.nyt.com/images/2021/02/02/arts/31popcast/31popcast-mediumSquareAt3X.jpg" alt="">
                         </div>
-                        <p class="section--body--item--title">L</p>
+                        <p class="section--body--item--title">Olivia Rodrigo</p>
                         <p class="section--body--item--subtitle">Artist</p>
                         <div class="section--body--item--play">
-                            <i class="lni lni-play" style="font-size: medium;"></i>
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
                         </div>
+                        <div class="rectangle">Rank : #8 <br> <br>Top song : <br><br> Genres : </div>
+                    </div>
+                    <div class="section--body--item artist--item">
+                        <div class="section--body--item--img">
+                            <img src="https://f4.bcbits.com/img/a0923440747_16.jpg" alt="">
+                        </div>
+                        <p class="section--body--item--title">Eminem</p>
+                        <p class="section--body--item--subtitle">Artist</p>
+                        <div class="section--body--item--play">
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
+                        </div>
+                        <div class="rectangle">Rank : #9 <br><br> Top song : <br><br> Genres : </div>
+                    </div>
+                    <div class="section--body--item artist--item">
+                        <div class="section--body--item--img">
+                            <img src="https://www.femalefirst.co.uk/image-library/square/1000/t/the-weeknd-promo-shot.jpg" alt="">
+                        </div>
+                        <p class="section--body--item--title">The Weeknd</p>
+                        <p class="section--body--item--subtitle">Artist</p>
+                        <div class="section--body--item--play">
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
+                        </div>
+                        <div class="rectangle">Rank : #10 <br><br> Top song : <br><br> Genres : </div>
+                    </div>
+                    <div class="section--body--item artist--item">
+                        <div class="section--body--item--img">
+                            <img src="https://pyxis.nymag.com/v1/imgs/8a0/881/e5d0cc7883f97e26f50f39389cc4c20df4-20-j-cole.rsquare.w700.jpg" alt="">
+                        </div>
+                        <p class="section--body--item--title">J. Cole</p>
+                        <p class="section--body--item--subtitle">Artist</p>
+                        <div class="section--body--item--play">
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
+                        </div>
+                        <div class="rectangle">Rank : #11 <br><br> Top song : <br><br> Genres : </div>
+                    </div>
+                    <div class="section--body--item artist--item">
+                        <div class="section--body--item--img">
+                            <img src="https://i.pinimg.com/736x/1b/ce/bb/1bcebb1549e3c302861e236cef4b9ab1.jpg" alt="">
+                        </div>
+                        <p class="section--body--item--title">Doja Cat</p>
+                        <p class="section--body--item--subtitle">Artist</p>
+                        <div class="section--body--item--play">
+                            <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;"></i>
+                        </div>
+                        <div class="rectangle">Rank : #12 <br><br> Top song : <br><br> Genres : </div>
                     </div>
                 </div>
                 
             </div>
+             <!--fifth page : Explore top songs-->
             <div class="section" id="section5">
                 <h2>Top songs</h2>
                 <br>
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWMOmoXKqHTD?utm_source=generator&theme=0" 
                     width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
             </iframe>
+             <!--sixth page : Genres circle graph -->
             </div>
             <div class="section" id="section6">
                 <h2>Genres</h2>
             </div>
+             <!--seventh page : music features -->
             <div class="section" id="section7">
                 <h2>Music features</h2>
             </div>
+            <!--eigth page : game -->
             <div class="section" id="section8">
                 <h2>Popularity game</h2>
             </div>
@@ -208,7 +255,7 @@
                 <div class="slide" id="slide2"><h1>Even for each slide if you want</h1></div>
             </div>
         </div>
-        
+
         <script type="text/javascript" src="js/fullpage.js"></script>
         
 
