@@ -5,11 +5,11 @@ body {
   }
 
   .h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
     color:white;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
   }
 
   .td {
@@ -31,7 +31,7 @@ body {
     font-size: 3em;
     font-family: helvetica, arial;
     color:white;
-    text-align: center;
+    text-align: centers;
     position: relative;
 }
 
@@ -73,7 +73,10 @@ body {
 		background: -webkit-linear-gradient(#527e8f, #000000);
 	}
     #section7{
-		background: -webkit-linear-gradient(#0010bb, #000000);
+		/*background: -webkit-linear-gradient(#464ea5, #000000);
+    /*background: white;*/
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(14,14,94,1) 68%, rgba(111,111,228,1) 100%);
+
 	}
     #section8{
 		background: -webkit-linear-gradient(#b81386, #000000);
@@ -96,7 +99,7 @@ body {
         list-style-type: none;
       }
 
-      ul{
+     /* .menu {
         display: flex;
         font-size: large;
         width: 100%;
@@ -107,7 +110,7 @@ body {
         text-align: left;
       }
 
-      li {
+      .tr {
         padding: 1rem 2rem 1.15rem;
         text-transform: uppercase;
         cursor: pointer;
@@ -116,10 +119,11 @@ body {
         margin: auto;
         text-align: center;
         
-      }
+      }*/
       
-      #buttons li a {
+      .menu a  {
         text-decoration: none;
+        display : block;
         padding: 1rem 2rem 1.15rem;
         text-transform: uppercase;
         cursor: pointer;
@@ -128,19 +132,30 @@ body {
         margin: auto;
       }
     
-      
-      li:hover {
+      .menu td:hover {
         background-color: grey;
         text-decoration: none;
         opacity: 0.5;
         color:white;
-        font-weight: bold;
-      }
+       }
 
-      li:active {
+      .menu tr:active {
         transform: translateY(4px);
       }
-
+      .menu td {
+        text-decoration: none;
+        border: 2px solid #ccd2ff;
+        position: relative;
+        padding: 18px;
+        font-size: 30px;
+      }
+      .menu {
+        text-decoration: none;
+        border-collapse: collapse;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
  	/* Artists page
 	* --------------------------------------- */
       .section--header {
@@ -178,6 +193,8 @@ a.section--header--right--more {
 
 .section--body--item {
     width: 165px;
+    margin: 0 auto;
+
     height: 220px;
     background-color: rgb(38, 38, 38);
     display: inline-block
@@ -251,12 +268,13 @@ a.section--header--right--more {
 .rectangle{
   padding-top: -40px;
     width:150px;
-    height:210px;
+    height:180px;
     z-index: 1000;
     background-color: rgb(93, 93, 93,0.8);
     position: absolute;
-    text-align: center;
-    font-size: 17px;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
     margin-top: -250px;
     margin-right: -20px;
     color: white;
@@ -267,14 +285,58 @@ a.section--header--right--more {
   display: block;
 }
 
-
-.button-dark {
-    background: green;
-    color: white;
-    border: 1px solid green;
+/* -------- histograms ----------- */ 
+.whiteAxis line{
+  stroke: #7f7eb9;
 }
-.button-dark:hover {
-      background: lighten( green, 10% );
-    
-  }
+.whiteAxis text{
+  fill: #7f7eb9;
+}
+.whiteAxis path{
+  stroke: #7f7eb9;
+}
 
+svg {
+  display: inline-block;
+  
+}
+
+.bar {
+  fill: #4947A9;
+  color: #b2b1e9;
+}
+
+.bar:hover {
+  fill: #998ece;
+}
+
+div.tooltip {	
+  position: absolute;			
+  text-align:left;			
+  width: 150px;					
+  height: 175px;					
+  padding: 2px;				
+  font: 14px sans-serif;		
+  background: #9b9ae0;
+  opacity: 0.3;	
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+iframe {
+  margin: 0 auto;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

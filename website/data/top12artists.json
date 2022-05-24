@@ -1,1 +1,99 @@
-[{"Rank": 1, "Artist": "Taylor Swift", "Top song": "happiness", "Genres": ["pop, post-teen pop"]}, {"Rank": 2, "Artist": "BTS", "Top song": "Permission to Dance", "Genres": ["k-pop, k-pop boy group"]}, {"Rank": 3, "Artist": "Justin Bieber", "Top song": "Peaches (feat. Daniel Caesar & Giveon)", "Genres": ["canadian pop, pop, post-teen pop", ""]}, {"Rank": 4, "Artist": "Lil Uzi Vert", "Top song": "That Way", "Genres": ["melodic rap, philly rap, rap, trap"]}, {"Rank": 5, "Artist": "Bad Bunny", "Top song": "Yonaguni", "Genres": ["latin, reggaeton, trap latino"]}, {"Rank": 6, "Artist": "Pop Smoke", "Top song": "Aim For The Moon (feat. Quavo)", "Genres": ["brooklyn drill"]}, {"Rank": 7, "Artist": "Juice WRLD", "Top song": "Real Shit (with benny blanco)", "Genres": ["chicago rap, melodic rap"]}, {"Rank": 8, "Artist": "Olivia Rodrigo", "Top song": "good 4 u", "Genres": ["pop"]}, {"Rank": 9, "Artist": "Eminem", "Top song": "Premonition - Intro", "Genres": ["detroit hip hop, hip hop, rap"]}, {"Rank": 10, "Artist": "The Weeknd", "Top song": "Save Your Tears (with Ariana Grande) (Remix)", "Genres": ["canadian contemporary r&b, canadian pop, pop"]}, {"Rank": 11, "Artist": "J. Cole", "Top song": "a p p l y i n g . p r e s s u r e", "Genres": ["conscious hip hop, hip hop, north carolina hip hop, rap"]}, {"Rank": 12, "Artist": "Doja Cat", "Top song": "Kiss Me More (feat. SZA)", "Genres": ["dance pop, pop"]}]
+[
+    {
+        "Rank": 1,
+        "Artist": "Taylor Swift",
+        "Top song": "happiness",
+        "Genres": [
+            "pop, post-teen pop"
+        ]
+    },
+    {
+        "Rank": 2,
+        "Artist": "BTS",
+        "Top song": "Permission to Dance",
+        "Genres": [
+            "k-pop, k-pop boy group"
+        ]
+    },
+    {
+        "Rank": 3,
+        "Artist": "Justin Bieber",
+        "Top song": "Peaches (feat. Daniel Caesar & Giveon)",
+        "Genres": [
+            "canadian pop, pop, post-teen pop",
+            ""
+        ]
+    },
+    {
+        "Rank": 4,
+        "Artist": "Lil Uzi Vert",
+        "Top song": "That Way",
+        "Genres": [
+            "melodic rap, philly rap, rap, trap"
+        ]
+    },
+    {
+        "Rank": 5,
+        "Artist": "Bad Bunny",
+        "Top song": "Yonaguni",
+        "Genres": [
+            "latin, reggaeton, trap latino"
+        ]
+    },
+    {
+        "Rank": 6,
+        "Artist": "Pop Smoke",
+        "Top song": "Aim For The Moon (feat. Quavo)",
+        "Genres": [
+            "brooklyn drill"
+        ]
+    },
+    {
+        "Rank": 7,
+        "Artist": "Juice WRLD",
+        "Top song": "Real Shit (with benny blanco)",
+        "Genres": [
+            "chicago rap, melodic rap"
+        ]
+    },
+    {
+        "Rank": 8,
+        "Artist": "Olivia Rodrigo",
+        "Top song": "good 4 u",
+        "Genres": [
+            "pop"
+        ]
+    },
+    {
+        "Rank": 9,
+        "Artist": "Eminem",
+        "Top song": "Premonition - Intro",
+        "Genres": [
+            "detroit hip hop, hip hop, rap"
+        ]
+    },
+    {
+        "Rank": 10,
+        "Artist": "The Weeknd",
+        "Top song": "Save Your Tears (with Ariana Grande) (Remix)",
+        "Genres": [
+            "canadian contemporary r&b, canadian pop, pop"
+        ]
+    },
+    {
+        "Rank": 11,
+        "Artist": "J. Cole",
+        "Top song": "a p p l y i n g . p r e s s u r e",
+        "Genres": [
+            "conscious hip hop, hip hop, north carolina hip hop, rap"
+        ]
+    },
+    {
+        "Rank": 12,
+        "Artist": "Doja Cat",
+        "Top song": "Kiss Me More (feat. SZA)",
+        "Genres": [
+            "dance pop, pop"
+        ]
+    }
+]

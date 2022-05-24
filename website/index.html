@@ -3,19 +3,21 @@
  <head>
     <title>SpotifyTop200</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="style/main.css" />
 
 
     <!--spotify logo in the tab -->
-     <link rel="icon" type="image/png" href="imgWebsite/Spotify_App_Logo.png">
+     <link rel="icon" type="image/svg" href="imgWebsite/Spotify_App_Logo.png">
      
      <link rel="stylesheet" type="text/css" href="style/fullpage.css" />
 
      <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <!-- jquery -->
      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-     <script src="https://d3js.org/d3.v7.min.js"></script>
+     <!--<script src="https://d3js.org/d3.v7.min.js"  charset="utf-8"></script>-->
+     <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
 
     </head>
 
@@ -24,10 +26,9 @@
         <div id="fullpage">
             <!--first page : spotify logo-->
             <div class="section " id="section0">
-                <div style="text-align:center; margin: 50px 0;">
-                    <img src="imgWebsite/Spotify_App_Logo.png"></img>
+                <div style="text-align:center; margin-top: 90px;">
+                    <img class="rotate" src="imgWebsite/spotify-2.svg" width='45%' height="45%"></img>
                 </div>
-                <br>
                 <h2>Spotify Top 200 2020-2021</h2>
             </div>
             <!--second page : explanation/introduction-->
@@ -47,16 +48,23 @@
                 </div>
             </div>
              <!--third page : Menu -->
-            <div class="section" id="section3">
-                <br><br>
+            <div class="section" id="section3">   
                 <h2>Good morning</h2>
-                <ul id="buttons">
-                    <li><a href="#section4">Explore Top Artists</a></li>
-                    <li><a href="#section5">Explore Top songs</a></li>
-                    <li><a href="#section6">Genres</a></li>
-                    <li><a href="#section7">Music Features</a></li>
-                    <li><a href="#section8">Popularity game</a></li>
-                  </ul>
+                <br><br>
+                <table style="width:60%;" class="menu">
+                    <tr>
+                      <td><a href="#section4">Explore Top Artists</a></div> </td>
+                      <td><a href="#section5">Explore Top songs</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#section6">Genres</a></td>
+                        <td><a href="#section7">Music Features</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#section8">Popularity game</a></td>
+                      <td><a href="#section8">Popularity game</a></td>
+                    </tr>
+                </table>
             </div>
              <!--fourth page : Explore top artists-->
             <div class="section" id="section4">
@@ -81,6 +89,7 @@
                         <div class="section--body--item--play">
                             <i class="lni lni-play" style="font-size: medium; position: relative; bottom:17px;" ></i>
                         </div>
+                        
                         <div id="rectangle1" class="rectangle"></div>
                     </div>
                     <div class="section--body--item artist--item">
@@ -226,25 +235,48 @@
                         </div>
                         <div id="rectangle12" class="rectangle"></div>
                     </div>
-                </div>
-                
+                </div>               
             </div>
              <!--fifth page : Explore top songs-->
             <div class="section" id="section5">
                 <h2>Top songs</h2>
                 <br>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWMOmoXKqHTD?utm_source=generator&theme=0" 
+                <div class="left-justified-text" style="max-width: 1000px; margin: 10px auto; font-size: x-large;">Discover the most popular songs !</div>
+                <iframe style="border-radius:12px; width:1300px;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWMOmoXKqHTD?utm_source=generator&theme=0" 
                     width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-            </iframe>
+                </iframe>
+
              <!--sixth page : Genres circle graph -->
             </div>
             <div class="section" id="section6">
                 <h2>Genres</h2>
             </div>
+
              <!--seventh page : music features -->
             <div class="section" id="section7">
                 <h2>Music features</h2>
+                <br>
+                <hr style="width:100%;text-align:left;margin-left:0; border-color: #998ece; color: #998ece; border-width: 2px; ">
+
+
+                <br>
+                <table style="width:100%">
+                    <tr>
+                      <td><div id="hist1" ></div> </td>
+                      <td><div id="hist2" ></div> </td>
+                      <td><div id="hist3" ></div> </td>
+                    </tr>
+                    <tr>
+                      <td><div id="hist4" ></div> </td>
+                      <td><div id="hist5" ></div> </td>
+                      <td><div id="hist6" ></div> </td>
+                    </tr>
+                </table>
+                  
+                <script src="js/music_features.js"></script>
+
             </div>
+
             <!--eigth page : game -->
             <div class="section" id="section8">
                 <h2>Popularity game</h2>
@@ -278,6 +310,8 @@
             
             });
         </script>
+
+       
     </body>
 
 
