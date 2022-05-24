@@ -84,6 +84,7 @@ body {
  	
  	/* Artists page
 	* --------------------------------------- */
+
       .section--header {
         color: #b3b3b3;
         font-size: 1rem;
@@ -115,6 +116,7 @@ a.section--header--right--more:hover,
 a.section--header--right--more {
     font-weight: 700;
     letter-spacing: 1.35px;
+    margin-right: 30px;
 }
 
 .section--body--item {
@@ -378,4 +380,10 @@ iframe {
 }
 #genretext {
   font-size: 15px;
+}
+
+.tooltip
+{
+ width:200px;
+ white-space:pre-wrap;
 }

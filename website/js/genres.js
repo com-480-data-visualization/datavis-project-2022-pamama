@@ -1,4 +1,4 @@
-Highcharts.chart('container', {
+var chart = new Highcharts.chart('container', {
 
     title: {
         text: 'Genres dependencies',
@@ -83,9 +83,17 @@ Highcharts.chart('container', {
                     return 'Melodic rap'.bold() + '<br> blabla'
                 } 
             },
-            valueDecimals: 2
+            useHTML: true,
+            valueDecimals: 2,
+            style: {
+                width: '100px'
+            }
         },
         size: '95%'
     }]
 
+},
+function(chart){
+    chart.container.lastChild.className = 'highcharts-tooltip';
+    
 });
