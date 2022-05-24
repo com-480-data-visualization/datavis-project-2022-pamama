@@ -98,12 +98,12 @@ function createHist(datapath,column,svg_,container,description) {
 
   }
   //Create SVG elements
-  description1 = "Danceability".bold() + ": describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable."
-  description2 = "Energy".bold() + ": a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy."
-  description3 = "Loudness".bold() + ": The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track. Values typical range between -60 and 0 db."
-  description4 = "Speechiness".bold() + ": detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value."
-  description5 = "Acousticness".bold() + ": A measure from 0.0 to 1.0 of whether the track is acoustic."
-  description6 = "Liveness".bold() + ": Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live."
+  description1 = "Danceability".bold() + ": <br>describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable."
+  description2 = "Energy".bold() + ": <br>a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy."
+  description3 = "Loudness".bold() + ": <br>The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track. Values typical range between -60 and 0 db."
+  description4 = "Speechiness".bold() + ": <br>detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value."
+  description5 = "Acousticness".bold() + ": <br>A measure from 0.0 to 1.0 of whether the track is acoustic."
+  description6 = "Liveness".bold() + ": <br>Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live."
 
   svg1_container = d3.select("#hist1")
   svg1 = svg1_container.append("svg").attr("width", width).attr("height", height);

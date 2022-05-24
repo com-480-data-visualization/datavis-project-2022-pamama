@@ -16,8 +16,23 @@
      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
      <!--<script src="https://d3js.org/d3.v7.min.js"  charset="utf-8"></script>-->
      <script src="https://d3js.org/d3.v4.min.js"></script>
+     
+     
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/sankey.js"></script>
+    <script src="https://code.highcharts.com/modules/dependency-wheel.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <style>
+        	/* Overwriting styles for navigation bullets
+                * --------------------------------------- */
+                #fp-nav ul li a span, 
+                .fp-slidesNav ul li a span{
+                    background: white;
+	}
 
-
+    </style>
 
     </head>
 
@@ -27,14 +42,15 @@
             <!--first page : spotify logo-->
             <div class="section " id="section0">
                 <div style="text-align:center; margin-top: 90px;">
-                    <img class="rotate" src="imgWebsite/spotify-2.svg" width='40%' height="40%"></img>
+                    <img src="imgWebsite/spotify-1.svg" width='85%' height="85%"></img>
                 </div>
-                <h2>Spotify Top 200 2020-2021</h2>
+                <!--<h2>Spotify Top 200 2020-2021</h2>-->
             </div>
             <!--second page : explanation/introduction-->
             <div class="section" id="section1">
                 <div class="intro">
-                    <h2>Intro</h2>
+                    <h2>Top 200 from 2020 to 2021</h2>
+                    <br>
                         <div class="left-justified-text" style="max-width: 1000px; margin: 10px auto; font-size: x-large;">
                             First, we will do a presentation of the top artists to get a better idea of the popularity trend. 
                             We will pick the 10 artists with the best ranking. 
@@ -69,6 +85,8 @@
              <!--fourth page : Explore top artists-->
             <div class="section" id="section4">
                 <h2>Top artists</h2>
+                <p style='font-size: 17px;'>Hover over the play buttons to know more about the artists !</p>
+                <br>
                 <div class="section--header">
                     <div class="section--header--left">
                         <h2 class="title">Top artists</h2>
@@ -250,17 +268,26 @@
             </div>
             <div class="section" id="section6">
                 <h2>Genres</h2>
+                <br>
+                <div id="genres">
+                    <div id="container" style="width: 50%;"></div>
+                    <script src="js/genres.js"></script>
+                    <div id="genresexplanation" style="width: 50%; margin-right: 10%; margin-top: 10%;">
+                        <h6>Here is an explanation</h6>
+                        <p id="genretext"> Each of them will be represented by their picture that we will be able to select to show some more 
+                            information like their rank, their top songs, and the genre of music. We took inspiration from the 
+                            display that we can find on the Spotify profiles.</p>
+                    </div>
+                </div>
             </div>
 
              <!--seventh page : music features -->
             <div class="section" id="section7">
                 <h2>Music features</h2>
+                <p style='font-size: 17px;'>Explanation : here we can see graphs.</p>
                 <br>
-                <hr style="width:100%;text-align:left;margin-left:0; border-color: #998ece; color: #998ece; border-width: 2px; ">
-
-
-                <br>
-                <table style="width:100%">
+                <!--<hr style="width:100%;text-align:left;margin-left:0; border-color: #998ece; color: #998ece; border-width: 2px; ">-->
+                <table style="width:100%" class='graphs'>
                     <tr>
                       <td><div id="hist1" ></div> </td>
                       <td><div id="hist2" ></div> </td>
@@ -281,17 +308,16 @@
             <div class="section" id="section8">
                 <h2>Popularity game</h2>
             </div>
-            <div class="section" id="section2">
-                <div class="slide" id="slide1"><h1>Soft graduated colors</h1></div>
-                <div class="slide" id="slide2"><h1>Even for each slide if you want</h1></div>
-            </div>
         </div>
 
         <script type="text/javascript" src="js/fullpage.js"></script>
         
 
         <script type="text/javascript">
-            var myFullpage = new fullpage('#fullpage');
+            var myFullpage = new fullpage('#fullpage', {
+                continuousVertical: true,
+                navigation: true,
+            });
         </script>
 
         <script>
@@ -303,7 +329,8 @@
                 mainContainer.appendChild(div);
                 var rec = document.getElementById("rectangle"+data[i].Rank);
                 var div2 = document.createElement("div");
-                div2.innerHTML = '<br> Rank : #'+data[i].Rank  + '<br><br>'  +'Top song : ' + data[i]['Top song'] 
+                div2.innerHTML = '<br> Artist :'.bold() + data[i].Artist.bold() + '<br><br> Rank : #' + 
+                data[i].Rank  + '<br><br>'  +'Top song : ' + data[i]['Top song'] 
                 + '<br><br>' +'Genres : ' + data[i].Genres; 
                 rec.appendChild(div2)
             }
