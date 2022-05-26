@@ -46,40 +46,68 @@ function createHist(datapath,column,svg_,container,description) {
               .attr('transform', 'translate(' + 29 + ',' + -margin.top + ')')
               .call(d3.axisLeft(y));
          
-        // Title
-        g.append("text")
-              .attr("x", width/2 + 30)
-              .attr("y", height + 40)
-              .attr("text-anchor", "middle")
-              .style("font-size", "16px")
-              .style('fill', '#d4d3f3')
-              .text(column);
+       
 
-          
 
           // create a tooltip
             var Tooltip = container
             .append("div")
             .style("opacity", 0)
+            .style("padding", "5px")
             .attr("class", "tooltip")
 
           // Three function that change the tooltip when user hover / move / leave a cell
           var mouseover = function(d) {
             Tooltip
-              .style("opacity", 0.8)
+              .style("opacity", 1)
           }
           var mousemove = function(d) {
             Tooltip
-              .html(description)
+              .html(("Number of songs : " + d.length))
               .style("left", (d3.event.pageX) + "px")
-              .style("top", (d3.event.pageY) - 170 + "px")
+              .style("top", (d3.event.pageY) - 20 + "px")
           }
           var mouseleave = function(d) {
             Tooltip
               .style("opacity", 0)
             
           }
-            
+
+          // create a tooltip
+          var TooltipTitle = container
+          .append("div")
+          .style("display", 'none')
+          .style("padding", "5px")
+          .attr("class", "tooltipTitle")
+
+        // Three function that change the tooltip when user hover / move / leave a cell
+        var mouseoverTitle = function(d) {
+          TooltipTitle
+            .style("display", 'block')
+        }
+        var mousemoveTitle = function(d) {
+          TooltipTitle
+            .html(description)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY) - 190 + "px")
+        }
+        var mouseleaveTitle = function(d) {
+          TooltipTitle
+            .style("display", 'none')
+          
+        }
+             // Title
+        g.append("text")
+        .attr("x", width/2 + 30)
+        .attr("y", height + 40)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style('fill', '#d4d3f3')
+        .text(column)
+        .on("mouseover", mouseoverTitle)
+        .on("mousemove", mousemoveTitle)
+        .on("mouseleave", mouseleaveTitle);
+
           // append the bar rectangles to the svg element
           g.selectAll("rect")
               .data(bins)
@@ -93,6 +121,7 @@ function createHist(datapath,column,svg_,container,description) {
                   .on("mouseover", mouseover)
                   .on("mousemove", mousemove)
                   .on("mouseleave", mouseleave)
+                
 
         });
 
