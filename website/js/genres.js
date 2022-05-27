@@ -33,7 +33,7 @@ var chart = new Highcharts.chart('container', {
         ['melodic rap', 'rap', 23]
         ],
         type: 'dependencywheel',
-        name: 'Dependency wheel series',
+        name: '',
         dataLabels: {
             color: 'white',
             style: {
@@ -86,10 +86,10 @@ var chart = new Highcharts.chart('container', {
             useHTML: true,
             valueDecimals: 2,
             style: {
-                width: '100px'
+                width: '50px'
             }
         },
-        size: '95%'
+        size: '100%'
     }]
 
 },
