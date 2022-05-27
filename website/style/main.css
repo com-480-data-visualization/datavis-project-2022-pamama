@@ -343,6 +343,9 @@ iframe {
 
 #container {
   height: 500px;
+  min-width: 310px;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 .highcharts-data-table table {
@@ -393,7 +396,7 @@ iframe {
   display:flex
 }
 #genretext {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .tooltip
@@ -409,7 +412,7 @@ iframe {
 }
 
 .explanation {
-  font-size: 17px; 
+  font-size: 20px; 
   text-align: left; 
   margin-left: 5%;
 }
