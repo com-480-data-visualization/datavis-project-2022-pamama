@@ -1,6 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    button {
+        display: inline-block;
+        background-color: #000000;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #f2f0f0;
+        text-align: center;
+        font-size: 35px;
+        padding: 20px;
+        width: 500px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #861677;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+</style>
  <head>
+    <script type="text/javascript">
+        // 
+        function direBonjour() {
+          fetch("spotify_dataset.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                test1 = Math.floor(Math.random() * 1555);
+                test2 = Math.floor(Math.random() * 1555);
+                var txtbtn1 = document.getElementById('txtbtn1');
+                var txtbtn2 = document.getElementById('txtbtn2');
+                txtbtn1.textContent = data[test1]['Artist']+",'"+ data[test1]['Song Name']+"'";
+                var btn = document.getElementById("btn1");
+                var btn2 = document.getElementById("btn2");
+                txtbtn2.textContent = data[test2]['Artist']+",'"+ data[test2]['Song Name']+"'";
+                var btn3 = document.getElementById("btn3")
+                var txtbtn3 = document.getElementById('txtbtn3');
+                txtbtn3.textContent = "Next"
+                var txt1 = document.getElementById('1p');
+                let score = parseInt(document.getElementById("score").innerHTML);
+                let hscore = parseInt(document.getElementById("hscore").innerHTML);
+                txt1.textContent ="";
+                
+                
+    
+                btn.addEventListener('click', updateBtn);
+                btn2.addEventListener('click', updateBtn2);
+                
+                btn3.removeEventListener('click', direBonjour)
+               
+    
+                function updateBtn() {
+                  if ( parseFloat(data[test1]['Streams'].replace(/,/g, ''))> parseFloat(data[test2]['Streams'].replace(/,/g, ''))) {
+                  txt1.textContent = "Congratulation,  " + txtbtn1.textContent + " has been streamed " + data[test1]['Streams'] + " times compare to "
+                  + data[test2]['Streams'] + " for " +txtbtn2.textContent ;
+                  document.getElementById("score").innerHTML = score + 1;
+              
+                  } else {
+                  txt1.textContent = "Wrong ! " + txtbtn1.textContent + " has only been streamed " + data[test1]['Streams'] + " times compare to "
+                  + data[test2]['Streams'] + " for " +txtbtn2.textContent+", try again !";
+                  txtbtn3.textContent = "Restart game"
+                  if ( score > hscore)
+                  {
+                    document.getElementById("hscore").innerHTML = score;
+                  }
+                  document.getElementById("score").innerHTML = 0;
+                  
+                  }
+                  btn.removeEventListener('click', updateBtn);
+                  btn2.removeEventListener('click', updateBtn2);
+                  btn3.addEventListener('click', direBonjour)
+                  
+                }
+                function updateBtn2() {
+                  if ( parseFloat(data[test1]['Streams'].replace(/,/g, ''))< parseFloat(data[test2]['Streams'].replace(/,/g, ''))) {
+                  txt1.textContent = "Congratulation,  " + txtbtn2.textContent + " has been streamed " + data[test2]['Streams'] + " times compare to "
+                  + data[test1]['Streams'] + " for " +txtbtn1.textContent ;
+                  document.getElementById("score").innerHTML = score + 1;
+    
+                  } else {
+                  txt1.textContent = "Wrong ! " + txtbtn2.textContent + " has only been streamed " + data[test2]['Streams'] + " times compare to "
+                  + data[test1]['Streams'] + " for " +txtbtn1.textContent+", try again !";
+                  txtbtn3.textContent= "Restart game"
+                  if ( score > hscore)
+                  {
+                    document.getElementById("hscore").innerHTML = score;
+                  }
+                  document.getElementById("score").innerHTML = 0;
+                  }
+                  btn.removeEventListener('click', updateBtn);
+                  btn2.removeEventListener('click', updateBtn2);
+                  btn3.addEventListener('click', direBonjour)
+                  
+                }
+    
+                
+        })}
+        </script>
     <title>SpotifyTop200</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style/main.css" />
@@ -353,7 +471,39 @@
 
             <!--eigth page : game -->
             <div class="section" id="section8">
-                <h2 class="pagetitle">Popularity game</h2>
+                <center>
+                    <font size = 4>
+                        <h1>Welcome to the music game</h1>
+                        <br>
+                        <p class ="explanation">Here the goal is to guess which song has been the most streamed between 2020 and 2021 on spotify, every good guess you score 1 point, carefull though at the first mistake you lose all your point !
+                              
+
+
+                        </p>
+                        <br>
+                        <button id ="btn1">
+                            <p id = "txtbtn1"></p>
+                        </button>
+                        <button id ="btn2">
+                          <p id = "txtbtn2"></p>
+                        </button>
+                        <p><button id ="btn3">
+                          <p id = "txtbtn3">Next</p>
+                        </button></p>
+                    
+                    
+                    
+                        
+                    
+                        <p id = "1p"></p>
+                        <p id = "2p">Score : <span class="score" id = "score">0</span></p>
+                        <p id = "3p">Your highscore is : <span class="score" id = "hscore">0</span></p>
+                    </font>
+                  </center>
+                  <script type="text/javascript">
+                  // Ici on apelle la fonction
+                  direBonjour()
+                  </script>
             </div>
         </div>
 
