@@ -214,6 +214,11 @@ a.section--header--right--more {
 }
 
 /* -------- histograms ----------- */ 
+
+.graphs {
+  width:100%;
+  height:70%;
+}
 .whiteAxis line{
   stroke: #7f7eb9;
 }
@@ -313,24 +318,6 @@ div.tooltipTitle {
   .menu,.menu tr,.menu td{
     background-color: transparent;
   }
-/* -------- turning spotify logo ----------- */ 
-
-iframe {
-  margin: 0 auto;
-}
-
-.rotate {
-  animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 
 /* -------- dependency wheel ----------- */ 
 
