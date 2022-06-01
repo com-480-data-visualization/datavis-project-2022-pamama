@@ -527,9 +527,9 @@
                 mainContainer.appendChild(div);
                 var rec = document.getElementById("rectangle"+data[i].Rank);
                 var div2 = document.createElement("div");
-                div2.innerHTML = '<br> Artist :'.bold() + data[i].Artist.bold() + '<br><br> Rank : #' + 
-                data[i].Rank  + '<br><br>'  +'Top song : ' + data[i]['Top song'] 
-                + '<br><br>' +'Genres : ' + data[i].Genres; 
+                div2.innerHTML = '<br>'+'Artist : '.bold() + data[i].Artist.bold() + '<br><br>' +'Rank'.bold()+' : #' + 
+                data[i].Rank  + '<br><br>'  +'Top song : '.bold() + data[i]['Top song'] 
+                + '<br><br>' +'Genres : '.bold() + data[i].Genres; 
                 rec.appendChild(div2)
             }
             
