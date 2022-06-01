@@ -1,6 +1,6 @@
 
   var width = 300;
-  var height = 300;
+  var height = 250;
 
 function createHist(datapath,column,svg_,container,description) {
   margin = {left:0,right:20,top:30,down:50}
@@ -34,7 +34,7 @@ function createHist(datapath,column,svg_,container,description) {
           var histogram = d3.histogram()
               .value(function(d) { return d[column]; })   
               .domain(x.domain())  
-              .thresholds(x.ticks(30)); 
+              .thresholds(x.ticks(40)); 
           var bins = histogram(data);
 
           // Add Y axis
@@ -103,6 +103,7 @@ function createHist(datapath,column,svg_,container,description) {
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
         .style('fill', '#d4d3f3')
+        .style('font-weight','bold')
         .text(column)
         .on("mouseover", mouseoverTitle)
         .on("mousemove", mousemoveTitle)

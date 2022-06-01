@@ -9,7 +9,6 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color:white;
-    /*margin-bottom: 10px;*/
   }
 
   .td {
@@ -34,6 +33,11 @@ body {
     position: relative;
 }
 
+.filter-green {
+  filter:invert(100%) sepia(0%) saturate(4193%) hue-rotate(135deg) brightness(125%) contrast(92%);
+
+
+}
 
 	/* Style for our header texts
 	* --------------------------------------- */
@@ -49,34 +53,104 @@ body {
 
 	  /* Defining each section background and styles
 	* --------------------------------------- */
-	#section0{
+	#p0{
 		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(14,14,94,1) 68%, rgba(111,111,228,1) 100%);
 	}
-    #section1 {
+    #p1 {
       background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(57, 30, 93) 68%, rgb(138, 111, 228) 100%);
 	}
-	#section2{
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(45, 14, 94) 68%, rgb(160, 126, 238) 100%);
-	}
-    #section3{
+
+    #p2{
 		background: -webkit-linear-gradient(#52578f, #000000);
 	}
-    #section4{
+    #p3{
 		background: -webkit-linear-gradient(#3c203f, #000000);
 	}
-    #section5{
+    #p4{
 		background: -webkit-linear-gradient(#275546, #000000);
 	}
-    #section6{
+    #p5{
 		background: -webkit-linear-gradient(#527e8f, #000000);
 	}
-    #section7{
+    #p6{
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(14,14,94,1) 68%, rgba(111,111,228,1) 100%);
 
 	}
-    #section8{
+    #p7{
 		background: -webkit-linear-gradient(#b81386, #000000);
 	}
+
+  /*------ arrow -----------*/
+
+.arrow-wave {
+  cursor: pointer;
+  font-size: 0;
+  display: inline-block;
+}
+
+.arrow-wave span {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 32px;
+  opacity: 0.2;
+}
+
+.arrow-wave span::before,
+.arrow-wave span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 24px;
+  background-color:#5eb964;
+}
+
+.arrow-wave span::before {
+  top: -2px;
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(45deg);
+}
+
+.arrow-wave span::after {
+  top: -2px;
+  right: 0;
+  transform-origin: right center;
+  transform: rotate(-45deg);
+}
+
+.arrow-wave span:nth-child(1n) {
+  animation: animate-arrow-wave 2s infinite;
+  animation-delay: 0.25s;
+}
+.arrow-wave span:nth-child(2n) {
+  animation: animate-arrow-wave 2s infinite;
+  animation-delay: 0.5s;
+}
+
+.arrow-wave span:nth-child(3n) {
+  animation: animate-arrow-wave 2s infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate-arrow-wave {
+  0% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
 
 
  	
@@ -212,10 +286,16 @@ a.section--header--right--more {
 
 /* -------- histograms ----------- */ 
 
+
 .graphs {
-  width:100%;
-  height:70%;
+  width:95%;
+  table-layout:fixed;
 }
+
+.graphs td {
+  height:60px;
+}
+
 .whiteAxis line{
   stroke: #7f7eb9;
 }
@@ -400,4 +480,53 @@ div.tooltipTitle {
   margin-left: 5%;
   margin-right: 25%;
 	
+}
+
+/* ------------------- game --------------- */
+
+.artistgame button {
+  display: inline-block;
+  background-color: #000000;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #f2f0f0;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  width: 500px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.artistgame button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.artistgame button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.artistgame button:hover {
+  background-color: #861677;
+}
+.artistgame button:hover span {
+  padding-right: 25px;
+}
+.artistgame button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#gamebutton {
+  margin: auto;
+  cursor: pointer;  
+  background-color: transparent;
+  border-color: transparent;
 }
