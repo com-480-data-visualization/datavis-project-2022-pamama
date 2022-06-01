@@ -1,7 +1,7 @@
 body {
     text-align: center;
     color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .h2 {
@@ -29,7 +29,6 @@ body {
 
   .section {
     font-size: 3em;
-    font-family: helvetica, arial;
     color:white;
     text-align: centers;
     position: relative;
@@ -40,7 +39,6 @@ body {
 	* --------------------------------------- */
 	h1{
 		font-size: 5em;
-		font-family: arial,helvetica;
 		color: #fff;
 		margin:0;
 		padding:0;
@@ -200,7 +198,6 @@ a.section--header--right--more {
     background-color: rgb(93, 93, 93,0.8);
     position: absolute;
     text-align: left;
-    font-family:Arial, Helvetica, sans-serif ;
     padding: 10px;
     font-size: 14px;
     margin-top: -250px;
@@ -336,7 +333,6 @@ div.tooltipTitle {
 }
 
 .highcharts-data-table table {
-  font-family: Verdana, sans-serif;
   border-collapse: collapse;
   border: 1px solid #ebebeb;
   margin: 10px auto;
