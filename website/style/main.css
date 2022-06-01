@@ -214,6 +214,7 @@ a.section--header--right--more {
 
 .graphs {
   width:100%;
+  height:70%;
 }
 .whiteAxis line{
   stroke: #7f7eb9;
