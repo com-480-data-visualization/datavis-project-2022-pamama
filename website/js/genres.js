@@ -26,11 +26,11 @@ var chart = new Highcharts.chart('container', {
         ['rap', 'hip hop', 50],
         ['rap', 'trap', 33],
         ['canadian pop', 'post-teen pop', 32],
-        ['k-pop', 'k-pop boy group', 30],
-        ['reggaeton', 'reggaeton colombiano', 29],
-        ['latin', 'reggaeton colombiano', 29],
-        ['pop', 'uk pop', 25],
-        ['melodic rap', 'rap', 23]
+        ['k-p', 'k-pop boy group', 30],
+        ['reggaeton', 'colombia', 29],
+        ['latin', 'colombia', 29],
+        ['pop', 'uk', 25],
+        ['rap ', 'rap', 23]
         ],
         type: 'dependencywheel',
         name: '',
@@ -49,6 +49,10 @@ var chart = new Highcharts.chart('container', {
             overflow: "allow",
             crop: false
         },
+
+        
+    
+    
         tooltip: {
             nodeFormatter: function() {
                 if (this.id === 'pop') {
@@ -71,15 +75,15 @@ var chart = new Highcharts.chart('container', {
                     return 'Hip hop'.bold() + '<br> Hip hop music is a genre of popular music developed in the United States by inner-city African Americans and Caribbean Americans in the Bronx borough of New York City in the 70s. It consists of a stylized rhythmic music that commonly accompanies rapping, a rhythmic and rhyming speech that is chanted. The term <i>hip hop music</i> is sometimes used synonymously with the term <i>rap music</i>, though rapping is not a required component of hip hop music; the genre may also incorporate other elements of hip hop culture, including DJing, turntablism, scratching, beatboxing, and instrumental tracks.'
                 } else if (this.id == 'trap') {
                     return 'Trap'.bold() + '<br> Trap is a subgenre of hip hop music that originated in the Southern United States during the early 2000s. The genre gets its name from the Atlanta lang word "trap", a house used exclusively to sell drugs. Trap music uses synthesized drums and is characterized by complex hi-hat patterns, tuned kick drums with a long, and lyrical content that often focuses on drug use and urban violence. It utilizes very few instruments and focuses almost exclusively on snare drums and double- or triple-timed hi-hats. '
-                } else if (this.id == 'k-pop') {
+                } else if (this.id == 'k-p') {
                     return 'K-pop'.bold() + '<br> K-pop, short for Korean popular music, is a form of popular music originating in South Korea as part of South Korean culture. It includes styles and genres from around the world, such as pop, hip hop, R&B, experimental, rock, jazz, gospel, reggae, electronic dance, country, disco, and classical on top of its traditional Korean music roots. The term "K-pop" became popular in the 2000s.'
                 } else if (this.id == 'k-pop boy group') {
                     return 'K-pop boy group'.bold() + '<br> Boy bands in K-pop music. A boy band or boy group is loosely defined as a vocal group consisting of young male singers, usually in their teenage years or in their twenties at the time of formation, singing love songs marketed towards girls. Many boy bands dance as well as sing, usually giving highly choreographed performances. '
-                } else if (this.id == 'reggaeton colombiano') {
+                } else if (this.id == 'colombia') {
                     return 'Reggaeton colombiano'.bold() + '<br> Reggaeton produced commercially in Colombia'
-                } else if (this.id == 'uk pop') {
+                } else if (this.id == 'uk') {
                     return 'UK pop'.bold() + '<br> British pop music is popular music, produced commercially in the United Kingdom.'
-                } else if (this.id == 'melodic rap') {
+                } else if (this.id == 'rap ') {
                     return 'Melodic rap'.bold() + '<br> Melodic rap, is a genre of music fusing the rhythm-based lyricism of hip hop music with pop music\'s preference for melodious vocals and catchy tunes. This genre gained mainstream popularity during the 90s. The lyrics are often lighthearted, with choruses similar to those heard in pop music.'
                 } 
             },
@@ -89,7 +93,7 @@ var chart = new Highcharts.chart('container', {
                 width: '50px'
             }
         },
-        size: '100%'
+        size: '98%'
     }]
 
 },
