@@ -24,4 +24,4 @@ Website skeleton : [here](https://com-480-data-visualization.github.io/datavis-p
 
 Screencast : [here]
 
-Website : [here](https://com-480-data-visualization.github.io/datavis-project-2022-pamama/), we recommend to use the lates versions of Google chrome or Safari for a better quality of the visualizations.
+Website : [here](https://com-480-data-visualization.github.io/datavis-project-2022-pamama/website), we recommend to use the lates versions of Google chrome or Safari for a better quality of the visualizations.
