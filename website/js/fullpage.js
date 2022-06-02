@@ -5094,9 +5094,9 @@
       var lastSection = getLast(state.sections);
       var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid;
 
-      if (lastSection && lastSection.item && shouldUseWaterMark) {
+     /* if (lastSection && lastSection.item && shouldUseWaterMark) {
         lastSection.item.insertAdjacentHTML('beforeend', waterMark);
-      }
+      }*/
     }
 
     !function () {
