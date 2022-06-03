@@ -22,6 +22,6 @@ Website skeleton : [here](https://com-480-data-visualization.github.io/datavis-p
 
 [Process Book](reports/processBook.pdf)
 
-Screencast : [here]
+Screencast : [here](https://youtu.be/C-RDO6iPvho)
 
 Website : [here](https://com-480-data-visualization.github.io/datavis-project-2022-pamama/website), we recommend to use the lates versions of Google chrome or Safari for a better quality of the visualizations.
