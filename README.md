@@ -27,6 +27,8 @@ Website skeleton : [here](https://com-480-data-visualization.github.io/datavis-p
 [Process Book](reports/processBook.pdf)
 
 Screencast : [here](https://youtu.be/C-RDO6iPvho)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C-RDO6iPvho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![IMAGE ALT TEXT HERE](https://youtu.be/C-RDO6iPvho/0.jpg)](https://youtu.be/C-RDO6iPvho)
+
 
 Website : [here](https://com-480-data-visualization.github.io/datavis-project-2022-pamama/website), we recommend to use the lates versions of Google chrome or Safari for a better quality of the visualizations.
