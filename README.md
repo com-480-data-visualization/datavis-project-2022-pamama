@@ -2,6 +2,10 @@
 
 Students : Knöpfel Marie, Vandelle Marc Pierre, Cito Paloma
 
+## Technical setup
+
+To run the code locally, clone the repository, go to the 'website' folder and open index.html in a local server (e.g by installing the Live Server plugin by Ritwick Dey on Visual Studio Code).
+
 ## Milestone 1 (8th April, 5pm)
 
 **10% of the final grade**
@@ -23,5 +27,6 @@ Website skeleton : [here](https://com-480-data-visualization.github.io/datavis-p
 [Process Book](reports/processBook.pdf)
 
 Screencast : [here](https://youtu.be/C-RDO6iPvho)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C-RDO6iPvho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Website : [here](https://com-480-data-visualization.github.io/datavis-project-2022-pamama/website), we recommend to use the lates versions of Google chrome or Safari for a better quality of the visualizations.
